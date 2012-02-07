@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('THINK_PATH')) exit();
-// 系统别名定义文件
+// Tệp định nghĩa alias hệ thống
 return array(
     'Model'         => CORE_PATH.'Core/Model.class.php',
     'Db'            => CORE_PATH.'Core/Db.class.php',

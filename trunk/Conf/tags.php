@@ -1,15 +1,15 @@
 <?php
 
-// 系统默认的核心行为扩展列表文件
+// 
 return array(
     'app_init'=>array(
     ),
     'app_begin'=>array(
-        'ReadHtmlCache', // 读取静态缓存
-        'CheckTemplate', // 模板检测
+        'ReadHtmlCache', // Đọc tệp cache tĩnh
+        'CheckTemplate', // Phát hiện giao diện
     ),
     'route_check'=>array(
-        'CheckRoute', // 路由检测
+        'CheckRoute', // Phát hiện bộ định tuyến
     ), 
     'app_end'=>array(),
     'path_info'=>array(),
@@ -17,7 +17,7 @@ return array(
     'action_end'=>array(),
     'view_begin'=>array(),
     'view_template'=>array(
-        'LocationTemplate', // 自动定位模板文件
+        'LocationTemplate', // Tự động xác định tệp tin giao diện
     ),
     'view_parse'=>array(
         'ParseTemplate', // 模板解析 支持PHP、内置模板引擎和第三方模板引擎
@@ -29,6 +29,6 @@ return array(
         'ShowRuntime', // 运行时间显示
     ),
     'view_end'=>array(
-        'ShowPageTrace', // 页面Trace显示
+        'ShowPageTrace', // Hiển thị trang thông tin trace
     ),
 );

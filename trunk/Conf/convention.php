@@ -2,10 +2,10 @@
 
 /**
  +------------------------------------------------------------------------------
- * ThinkPHP惯例配置文件
- * 该文件请不要修改，如果要覆盖惯例配置的值，可在项目配置文件中设定和惯例不符的配置项
- * 配置名称大小写任意，系统会统一转换成小写
- * 所有配置参数都可以在生效前动态改变
+ * ThinkPHP Tệp cấu hình tùy chọn
+ * Vui lòng không chỉnh sửa tệp tin này, mọi chỉnh sửa có thể làm hệ thống lỗi.
+ * Trong trường hợp bạn thay đổi cấu hình tùy ý, hệ thống sẽ biến đổi thành chữ thường
+ * Tất cả các tham số phải được cấu hình trước khi chạy core
  +------------------------------------------------------------------------------
  * @category Think
  * @package  Common
@@ -15,7 +15,7 @@
  */
 if (!defined('THINK_PATH')) exit();
 return  array(
-    /* 项目设定 */
+    /* Thiết lập project */
     'APP_STATUS'            => 'debug',  // 应用调试模式状态 调试模式开启后有效 默认为debug 可扩展 并自动加载对应的配置文件
     'APP_FILE_CASE'         => false,   // 是否检查文件的大小写 对Windows平台有效
     'APP_AUTOLOAD_PATH'     => '',// 自动加载机制的自动搜索路径,注意搜索顺序
@@ -25,15 +25,15 @@ return  array(
     'APP_SUB_DOMAIN_DENY'   => array(), //  子域名禁用列表
     'APP_GROUP_LIST'        => '',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin'
 
-    /* Cookie设置 */
-    'COOKIE_EXPIRE'         => 3600,    // Coodie有效期
-    'COOKIE_DOMAIN'         => '',      // Cookie有效域名
-    'COOKIE_PATH'           => '/',     // Cookie路径
-    'COOKIE_PREFIX'         => '',      // Cookie前缀 避免冲突
+    /* Thiết lập cookie */
+    'COOKIE_EXPIRE'         => 3600,    // Thời gian lưu cookie
+    'COOKIE_DOMAIN'         => '',      // Cookie domain
+    'COOKIE_PATH'           => '/',     // Cookie path
+    'COOKIE_PREFIX'         => '',      // Cookie prefix
 
-    /* 默认设定 */
+    /* Thiết lập mặc định */
     'DEFAULT_APP'           => '@',     // 默认项目名称，@表示当前项目
-    'DEFAULT_LANG'          => 'zh-cn', // 默认语言
+    'DEFAULT_LANG'          => 'vi-vn', // 默认语言
     'DEFAULT_GROUP'         => 'Home',  // 默认分组
     'DEFAULT_MODULE'        => 'Index', // 默认模块名称
     'DEFAULT_ACTION'        => 'index', // 默认操作名称
@@ -42,7 +42,7 @@ return  array(
     'DEFAULT_AJAX_RETURN'   => 'JSON',  // 默认AJAX 数据返回格式,可选JSON XML ...
     'DEFAULT_FILTER'        => 'htmlspecialchars', // 默认参数过滤方法 用于 $this->_get('变量名');$this->_post('变量名')...
 
-    /* 数据库设置 */
+    /* Thiết lập cơ sở dữ liệu */
     'DB_TYPE'               => 'mysql',     // 数据库类型
 	'DB_HOST'               => 'localhost', // 服务器地址
 	'DB_NAME'               => '',          // 数据库名
@@ -60,7 +60,7 @@ return  array(
     'DB_SQL_BUILD_QUEUE'    => 'file',   // SQL缓存队列的缓存方式 支持 file xcache和apc
     'DB_SQL_BUILD_LENGTH'   => 20, // SQL缓存的队列长度
 
-    /* 数据缓存设置 */
+    /* Cài đặt bộ nhớ cache */
     'DATA_CACHE_TIME'		=> 0,      // 数据缓存有效期 0表示永久缓存
     'DATA_CACHE_COMPRESS'   => false,   // 数据缓存是否压缩缓存
     'DATA_CACHE_CHECK'		=> false,   // 数据缓存是否校验缓存
@@ -69,12 +69,12 @@ return  array(
     'DATA_CACHE_SUBDIR'		=> false,    // 使用子目录缓存 (自动根据缓存标识的哈希创建子目录)
     'DATA_PATH_LEVEL'       => 1,        // 子目录缓存级别
 
-    /* 错误设置 */
-    'ERROR_MESSAGE'         => '您浏览的页面暂时发生了错误！请稍后再试～',//错误显示信息,非调试模式有效
+    /* Thông báo lỗi */
+    'ERROR_MESSAGE'         => 'Có lỗi phát sinh, vui lòng thử lại sau~',//错误显示信息,非调试模式有效
     'ERROR_PAGE'            => '',	// 错误定向页面
     'SHOW_ERROR_MSG'        => false,    // 显示错误信息
 
-    /* 日志设置 */
+    /* Thiết lập log */
     'LOG_RECORD'            => false,   // 默认不记录日志
     'LOG_TYPE'                 => 3, // 日志记录类型 0 系统 1 邮件 3 文件 4 SAPI 默认为文件方式
     'LOG_DEST'                 => '', // 日志记录目标
@@ -83,27 +83,27 @@ return  array(
     'LOG_FILE_SIZE'         => 2097152,	// 日志文件大小限制
     'LOG_EXCEPTION_RECORD'  => false,    // 是否记录异常信息日志
 
-    /* SESSION设置 */
+    /* Thiết lập SESSION */
     'SESSION_AUTO_START'    => true,    // 是否自动开启Session
     'SESSION_OPTIONS'           => array(), // session 配置数组 支持type name id path expire domian 等参数
     'SESSION_TYPE'              => '', // session hander类型 默认无需设置 除非扩展了session hander驱动
     'SESSION_PREFIX'            => '', // session 前缀
     'VAR_SESSION_ID'        => 'session_id',     //sessionID的提交变量
 
-    /* 模板引擎设置 */
+    /* Cài đặt cơ bản cho template engine */
     'TMPL_CONTENT_TYPE'     => 'text/html', // 默认模板输出类型
     'TMPL_ACTION_ERROR'     => THINK_PATH.'Tpl/dispatch_jump.tpl', // 默认错误跳转对应的模板文件
     'TMPL_ACTION_SUCCESS'   => THINK_PATH.'Tpl/dispatch_jump.tpl', // 默认成功跳转对应的模板文件
     'TMPL_EXCEPTION_FILE'   => THINK_PATH.'Tpl/think_exception.tpl',// 异常页面的模板文件
 
-    /* URL设置 */
+    /* Thiết lập URL */
 	'URL_CASE_INSENSITIVE'  => false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
     'URL_MODEL'             => 1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
     // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式，提供最好的用户体验和SEO支持
     'URL_PATHINFO_DEPR'     => '/',	// PATHINFO模式下，各参数之间的分割符号
     'URL_HTML_SUFFIX'       => '',  // URL伪静态后缀设置
 
-    /* 系统变量名称设置 */
+    /* Thiết lập biến hệ thống */
     'VAR_GROUP'             => 'g',     // 默认分组获取变量
     'VAR_MODULE'            => 'm',		// 默认模块获取变量
     'VAR_ACTION'            => 'a',		// 默认操作获取变量

@@ -2,8 +2,8 @@
 
 /**
  +------------------------------------------------------------------------------
- * ThinkPHP 默认的调试模式配置文件
- *  如果项目有定义自己的调试模式配置文件，本文件无效
+ * ThinkPHP Tệp cấu hình chế độ debug mặc định
+ *  Nếu trong project của bạn có tệp cấu hình debug riêng, tệp này sẽ bị vô hiệu
  +------------------------------------------------------------------------------
  * @category   Think
  * @package  Common
@@ -12,13 +12,13 @@
  +------------------------------------------------------------------------------
  */
 if (!defined('THINK_PATH')) exit();
-// 调试模式下面默认设置 可以在项目配置目录下重新定义 debug.php 覆盖
+// Chế độ debug, các cấu hình mặc định dưới đây có thể được định nghĩa lại trong từng project với tên tệp là debug.php
 return  array(
-    'LOG_RECORD'=>true,  // 进行日志记录
-    'LOG_EXCEPTION_RECORD'  => true,    // 是否记录异常信息日志
-    'LOG_LEVEL'       =>   'EMERG,ALERT,CRIT,ERR,WARN,NOTIC,INFO,DEBUG,SQL',  // 允许记录的日志级别
-    'DB_FIELDS_CACHE'=> false, // 字段缓存信息
-    'APP_FILE_CASE'  =>   true, // 是否检查文件的大小写 对Windows平台有效
-    'TMPL_STRIP_SPACE'      => false,       // 是否去除模板文件里面的html空格与换行
-    'SHOW_ERROR_MSG'        => true,    // 显示错误信息
+    'LOG_RECORD'=>true,  // Ghi thông tin thao tác
+    'LOG_EXCEPTION_RECORD'  => true,    // Ghi các thông tin thao tác ngoại lệ
+    'LOG_LEVEL'       =>   'EMERG,ALERT,CRIT,ERR,WARN,NOTIC,INFO,DEBUG,SQL',  // Cấp độ ghi log
+    'DB_FIELDS_CACHE'=> false, // Log trường cơ sở dữ liệu
+    'APP_FILE_CASE'  =>   true, // Kiểm tra các tệp trong trường hợp sử dụng windows
+    'TMPL_STRIP_SPACE'      => false,       // Loại bỏ cách dòng, khoảng trắng
+    'SHOW_ERROR_MSG'        => true,    // Hiển thị lỗi
 );
