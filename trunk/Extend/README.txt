@@ -1,23 +1,23 @@
 ﻿
-Extend目录为系统扩展目录（核心版不含任何扩展），子目录结构为：
+Thư mục mở rộng của hệ thống(bản core không có extend nào)
 
-|-Action	控制器扩展
-|-Behavior	行为扩展
-|-Driver	驱动扩展
-|  ├Driver/Cache		缓存驱动
-|  ├Driver/Db		数据库驱动
-|  ├Driver/Session	SESSION驱动
-|  ├Driver/TagLib	标签库驱动
-|  ├Driver/Template	模板引擎驱动
+|-Action	Controller Extension
+|-Behavior	Behavior extension
+|-Driver	Driver expansion
+|  ├Driver/Cache		Cache driver
+|  ├Driver/Db			Database cache driver
+|  ├Driver/Session		SESSION
+|  ├Driver/TagLib		Tag lib driver
+|  ├Driver/Template	 	Template engine driver
 |
-|-Function	函数扩展
-|-Library	类库扩展
-|  ├ORG	ORG类库包
-|  ├COM	COM类库包
+|-Function	Function 
+|-Library	Class library extension
+|  ├ORG		ORG Library packages
+|  ├COM		COM Library packages
 |
-|-Mode	模式扩展
-|-Model	模型扩展
-|-Tool	其他扩展或工具
-|-Vendor	第三方类库目录
+|-Mode	Mode extension
+|-Model	Model extension
+|-Tool	Other extensions or tools
+|-Vendor	Third-party class library catalog
 
-关于扩展的详细使用，请参考开发手册的扩展章节。
+Để sử dụng các extension bên ngoài, vui lòng tham khảo hướng dẫn của nhà phát hành.
