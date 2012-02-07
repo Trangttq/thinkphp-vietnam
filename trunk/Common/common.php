@@ -1,18 +1,7 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK IT ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2012 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-// $Id$
-
 /**
   +------------------------------------------------------------------------------
- * Think 基础函数库
+ * Think Tệp thư viện chức năng cơ bản
   +------------------------------------------------------------------------------
  * @category   Think
  * @package  Common
@@ -21,20 +10,20 @@
   +------------------------------------------------------------------------------
  */
 
-// 记录和统计时间（微秒）
+// Bản log và thống kê thời gian(mili giây)
 function G($start,$end='',$dec=4) {
     static $_info = array();
-    if(is_float($end)) { // 记录时间
+    if(is_float($end)) { // Thời gian log
         $_info[$start]  =  $end;
-    }elseif(!empty($end)){ // 统计时间
+    }elseif(!empty($end)){ // Thời gian thống kê
         if(!isset($_info[$end])) $_info[$end]   =  microtime(TRUE);
         return number_format(($_info[$end]-$_info[$start]),$dec);
-    }else{ // 记录时间
+    }else{ // Thời gian log
         $_info[$start]  =  microtime(TRUE);
     }
 }
 
-// 设置和获取统计数据
+// Thiết lập và truy cập dữ liệu thống kê
 function N($key, $step=0) {
     static $_num = array();
     if (!isset($_num[$key])) {
