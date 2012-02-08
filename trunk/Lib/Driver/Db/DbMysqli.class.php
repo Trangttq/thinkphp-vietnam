@@ -370,7 +370,7 @@ class DbMysqli extends Db{
     public function error() {
         $this->error = $this->_linkID->error;
         if($this->debug && '' != $this->queryStr){
-            $this->error .= "\n [ SQL语句 ] : ".$this->queryStr;
+            $this->error .= "\n [ Lệnh SQL ] : ".$this->queryStr;
         }
         return $this->error;
     }

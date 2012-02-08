@@ -250,7 +250,7 @@ class Think {
       switch ($errno) {
           case E_ERROR:
           case E_USER_ERROR:
-            $errorStr = "[$errno] $errstr ".basename($errfile)." 第 $errline 行.";
+            $errorStr = "[$errno] $errstr ".basename($errfile)." lỗi tại dòng $errline.";
             if(C('LOG_RECORD')) Log::write($errorStr,Log::ERR);
             halt($errorStr);
             break;
@@ -258,7 +258,7 @@ class Think {
           case E_USER_WARNING:
           case E_USER_NOTICE:
           default:
-            $errorStr = "[$errno] $errstr ".basename($errfile)." 第 $errline 行.";
+            $errorStr = "[$errno] $errstr ".basename($errfile)." lỗi tại dòng $errline.";
             Log::record($errorStr,Log::NOTICE);
             break;
       }
