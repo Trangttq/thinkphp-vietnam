@@ -16,7 +16,7 @@ class DbIbase extends Db{
     protected $selectSql  =     'SELECT %LIMIT% %DISTINCT% %FIELD% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%';
     /**
      +----------------------------------------------------------
-     * 架构函数 读取数据库配置信息
+     * Cấu trúc chức năng 读取数据库配置信息
      +----------------------------------------------------------
      * @access public
      +----------------------------------------------------------

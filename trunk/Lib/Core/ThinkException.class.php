@@ -2,7 +2,7 @@
 
 /**
  +------------------------------------------------------------------------------
- * ThinkPHP系统异常基类
+ * ThinkPHP Class thông số ngoại lệ, bẫy lỗi
  +------------------------------------------------------------------------------
  * @category   Think
  * @package  Think
@@ -15,7 +15,7 @@ class ThinkException extends Exception {
 
     /**
      +----------------------------------------------------------
-     * 异常类型
+     * Kiểu ngoại lệ
      +----------------------------------------------------------
      * @var string
      * @access private
@@ -23,16 +23,16 @@ class ThinkException extends Exception {
      */
     private $type;
 
-    // 是否存在多余调试信息
+    // Các tham số lỗi ngoại lệ đã tồn tại
     private $extra;
 
     /**
      +----------------------------------------------------------
-     * 架构函数
+     * Cấu trúc chức năng
      +----------------------------------------------------------
      * @access public
      +----------------------------------------------------------
-     * @param string $message  异常信息
+     * @param string $message  Thông tin bẫy lỗi
      +----------------------------------------------------------
      */
     public function __construct($message,$code=0,$extra=false) {
@@ -84,7 +84,7 @@ class ThinkException extends Exception {
         $error['line']      = $this->line;
         $error['trace']     = $traceInfo;
 
-        // 记录 Exception 日志
+        // Log thao tác Exception
         if(C('LOG_EXCEPTION_RECORD')) {
             Log::Write('('.$this->type.') '.$this->message);
         }

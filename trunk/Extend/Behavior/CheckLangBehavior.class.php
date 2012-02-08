@@ -2,11 +2,11 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 语言检测 并自动加载语言包
+ * Thao tác mở rộng hệ thống 语言检测 并自动加载语言包
  +------------------------------------------------------------------------------
  */
 class CheckLangBehavior extends Behavior {
-    // 行为参数定义（默认值） 可在项目配置中覆盖
+    // Tham số định nghĩa cho thao tác mở rộng（默认值） 可在项目配置中覆盖
     protected $options   =  array(
             'LANG_SWITCH_ON'        => false,   // 默认关闭语言包功能
             'LANG_AUTO_DETECT'      => true,   // 自动侦测语言 开启多语言功能后有效
@@ -14,7 +14,7 @@ class CheckLangBehavior extends Behavior {
             'VAR_LANGUAGE'          => 'l',		// 默认语言切换变量
         );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$params){
         // 开启静态缓存
         $this->checkLanguage();

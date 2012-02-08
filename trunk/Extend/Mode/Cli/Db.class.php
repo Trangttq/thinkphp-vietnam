@@ -41,7 +41,7 @@ class Db {
     protected $selectSql  =     'SELECT%DISTINCT% %FIELDS% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%%LIMIT%';
     /**
      +----------------------------------------------------------
-     * 架构函数
+     * Cấu trúc chức năng
      +----------------------------------------------------------
      * @access public
      +----------------------------------------------------------

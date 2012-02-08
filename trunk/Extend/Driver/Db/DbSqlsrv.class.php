@@ -15,7 +15,7 @@ class DbSqlsrv extends Db{
     protected $selectSql  =     'SELECT T1.* FROM (SELECT ROW_NUMBER() OVER (%ORDER%) AS ROW_NUMBER, thinkphp.* FROM (SELECT %DISTINCT% %FIELD% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%) AS thinkphp) AS T1 WHERE %LIMIT%';
     /**
      +----------------------------------------------------------
-     * 架构函数 读取数据库配置信息
+     * Cấu trúc chức năng 读取数据库配置信息
      +----------------------------------------------------------
      * @access public
      +----------------------------------------------------------
