@@ -49,7 +49,7 @@ class CheckRouteBehavior extends Behavior {
                                     break;
                                 }
                             }
-                        }elseif($val != $m1[$key]){
+                        }elseif(0 !== strcasecmp($val,$m1[$key])){
                             $match = false;
                             break;
                         }
