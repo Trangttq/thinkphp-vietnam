@@ -2,12 +2,12 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 模板解析
+ * Thao tác mở rộng hệ thống 模板解析
  +------------------------------------------------------------------------------
  */
 
 class ParseTemplateBehavior extends Behavior {
-    // 行为参数定义（默认值） 可在项目配置中覆盖
+    // Tham số định nghĩa cho thao tác mở rộng（默认值） 可在项目配置中覆盖
     protected $options   =  array(
         // 布局设置
         'TMPL_ENGINE_TYPE'		=> 'Think',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
@@ -33,7 +33,7 @@ class ParseTemplateBehavior extends Behavior {
         'TAG_NESTED_LEVEL'		=> 3,    // 标签嵌套级别
         );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$_data){
         $engine  = strtolower(C('TMPL_ENGINE_TYPE'));
         if('think'==$engine){ // 采用Think模板引擎

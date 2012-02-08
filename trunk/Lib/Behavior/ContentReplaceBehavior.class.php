@@ -2,16 +2,16 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 模板内容输出替换
+ * Thao tác mở rộng hệ thống 模板内容输出替换
  +------------------------------------------------------------------------------
  */
 class ContentReplaceBehavior extends Behavior {
-    // 行为参数定义
+    // Tham số định nghĩa cho thao tác mở rộng
     protected $options   =  array(
         'TMPL_PARSE_STRING'=>array(),
     );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$content){
         $content = $this->templateContentReplace($content);
     }

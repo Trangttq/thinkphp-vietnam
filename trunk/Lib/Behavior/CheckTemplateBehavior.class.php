@@ -2,11 +2,11 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 模板检测
+ * Thao tác mở rộng hệ thống 模板检测
  +------------------------------------------------------------------------------
  */
 class CheckTemplateBehavior extends Behavior {
-    // 行为参数定义（默认值） 可在项目配置中覆盖
+    // Tham số định nghĩa cho thao tác mở rộng（默认值） 可在项目配置中覆盖
     protected $options   =  array(
             'VAR_TEMPLATE'          => 't',		// 默认模板切换变量
             'TMPL_DETECT_THEME'     => false,       // 自动侦测模板主题
@@ -15,7 +15,7 @@ class CheckTemplateBehavior extends Behavior {
             'TMPL_FILE_DEPR'=>'/', //模板文件MODULE_NAME与ACTION_NAME之间的分割符，只对项目分组部署有效
         );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$params){
         // 开启静态缓存
         $this->checkTemplate();

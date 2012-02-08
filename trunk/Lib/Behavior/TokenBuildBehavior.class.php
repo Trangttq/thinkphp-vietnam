@@ -2,46 +2,46 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 表单令牌生成
+ * Thao tác mở rộng hệ thống Bộ tạo form mẫu token
  +------------------------------------------------------------------------------
  */
 class TokenBuildBehavior extends Behavior {
-    // 行为参数定义
+    // Định nghĩa thao tác
     protected $options   =  array(
-        'TOKEN_ON'              => true,     // 开启令牌验证
-        'TOKEN_NAME'            => '__hash__',    // 令牌验证的表单隐藏字段名称
-        'TOKEN_TYPE'            => 'md5',   // 令牌验证哈希规则
-        'TOKEN_RESET'               =>   true, // 令牌错误后是否重置
+        'TOKEN_ON'              => true,     // Bật chức năng xác nhận token
+        'TOKEN_NAME'            => '__hash__',    // Token authentication từ trường bị ẩn
+        'TOKEN_TYPE'            => 'md5',   // Quy tắc sử dụng để xác nhận
+        'TOKEN_RESET'               =>   true, // Có tạo lại token khi bị lỗi?
     );
 
     public function run(&$content){
         if(C('TOKEN_ON')) {
             if(strpos($content,'{__TOKEN__}')) {
-                // 指定表单令牌隐藏域位置
+                // Xác định vị trí trường ẩn giấu từ biểu mẫu
                 $content = str_replace('{__TOKEN__}',$this->buildToken(),$content);
             }elseif(preg_match('/<\/form(\s*)>/is',$content,$match)) {
-                // 智能生成表单令牌隐藏域
+                // Tạo token thông minh từ biểu mẫu
                 $content = str_replace($match[0],$this->buildToken().$match[0],$content);
             }
         }
     }
 
-    // 创建表单令牌
+    // Tạo form token
     private function buildToken() {
         $tokenName   = C('TOKEN_NAME');
         $tokenType = C('TOKEN_TYPE');
         if(!isset($_SESSION[$tokenName])) {
             $_SESSION[$tokenName]  = array();
         }
-        // 标识当前页面唯一性
+        // Định nghĩa dành cho trang hiện hành
         $tokenKey  =  md5($_SERVER['REQUEST_URI']);
-        if(isset($_SESSION[$tokenName][$tokenKey])) {// 相同页面不重复生成session
+        if(isset($_SESSION[$tokenName][$tokenKey])) {// Tránh trường hợp trùng mã token bằng cách thêm biến session
             $tokenValue = $_SESSION[$tokenName][$tokenKey];
         }else{
             $tokenValue = $tokenType(microtime(TRUE));
             $_SESSION[$tokenName][$tokenKey]   =  $tokenValue;
         }
-        // 执行一次额外动作防止远程非法提交
+        // Thêm thao tác bổ sung để tránh trường hợp trang remote khác có thể thao tác trái phép
         if($action   =  C('TOKEN_ACTION')){
             $_SESSION[$action($tokenKey)] = true;
         }

@@ -2,22 +2,22 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 运行时间信息显示
+ * Thao tác mở rộng hệ thống Hiển thị thông tin runtime
  +------------------------------------------------------------------------------
  */
 class ShowRuntimeBehavior extends Behavior {
-    // 行为参数定义
+    // Định nghĩa tham số mở rộng
     protected $options   =  array(
-        'SHOW_RUN_TIME'			=> false,   // 运行时间显示
-        'SHOW_ADV_TIME'			=> false,   // 显示详细的运行时间
-        'SHOW_DB_TIMES'			=> false,   // 显示数据库查询和写入次数
-        'SHOW_CACHE_TIMES'		=> false,   // 显示缓存操作次数
-        'SHOW_USE_MEM'			=> false,   // 显示内存开销
-        'SHOW_LOAD_FILE'          => false,   // 显示加载文件数
-        'SHOW_FUN_TIMES'         => false ,  // 显示函数调用次数
+        'SHOW_RUN_TIME'			=> false,   // Hiển thị runtime
+        'SHOW_ADV_TIME'			=> false,   // Hiển thị chi tiết runtime
+        'SHOW_DB_TIMES'			=> false,   // Hiển thị truy vấn tới csdl
+        'SHOW_CACHE_TIMES'		=> false,   // Hiển thị thông số cache
+        'SHOW_USE_MEM'			=> false,   // Hiển thị thông số bộ nhớ sử dụng
+        'SHOW_LOAD_FILE'          => false,   // Hiển thị thời gian tải trang
+        'SHOW_FUN_TIMES'         => false ,  // Hiển thị số lượng chức năng sử dụng
     );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$content){
         if(C('SHOW_RUN_TIME')){
             if(false !== strpos($content,'{__NORUNTIME__}')) {
@@ -36,32 +36,32 @@ class ShowRuntimeBehavior extends Behavior {
 
     /**
      +----------------------------------------------------------
-     * 显示运行时间、数据库操作、缓存次数、内存使用信息
-     +----------------------------------------------------------
+     * Hiển thị runtime,thông số về truy vấn, số lượng cache、,thông số memorry
+	 +----------------------------------------------------------
      * @access private
      +----------------------------------------------------------
      * @return string
      +----------------------------------------------------------
      */
     private function showTime() {
-        // 显示运行时间
+        // Hiển thị thời gian chạy
         G('beginTime',$GLOBALS['_beginTime']);
         G('viewEndTime');
         $showTime   =   'Process: '.G('beginTime','viewEndTime').'s ';
         if(C('SHOW_ADV_TIME')) {
-            // 显示详细运行时间
+            // Hiển thị thời gian chi tiết
             $showTime .= '( Load:'.G('beginTime','loadTime').'s Init:'.G('loadTime','initTime').'s Exec:'.G('initTime','viewStartTime').'s Template:'.G('viewStartTime','viewEndTime').'s )';
         }
         if(C('SHOW_DB_TIMES') && class_exists('Db',false) ) {
-            // 显示数据库操作次数
+            // Hiển thị số truy vấn tới csdl
             $showTime .= ' | DB :'.N('db_query').' queries '.N('db_write').' writes ';
         }
         if(C('SHOW_CACHE_TIMES') && class_exists('Cache',false)) {
-            // 显示缓存读写次数
+            // Đọc và ghi cache
             $showTime .= ' | Cache :'.N('cache_read').' gets '.N('cache_write').' writes ';
         }
         if(MEMORY_LIMIT_ON && C('SHOW_USE_MEM')) {
-            // 显示内存开销
+            // Hiển thị số memory đã sử dụng
             $showTime .= ' | UseMem:'. number_format((memory_get_usage() - $GLOBALS['_startUseMems'])/1024).' kb';
         }
         if(C('SHOW_LOAD_FILE')) {

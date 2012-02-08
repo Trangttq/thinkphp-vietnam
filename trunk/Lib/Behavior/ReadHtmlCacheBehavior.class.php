@@ -2,7 +2,7 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 静态缓存读取
+ * Thao tác mở rộng hệ thống 静态缓存读取
  +------------------------------------------------------------------------------
  */
 class ReadHtmlCacheBehavior extends Behavior {
@@ -13,7 +13,7 @@ class ReadHtmlCacheBehavior extends Behavior {
             'HTML_FILE_SUFFIX'=>'.html',
         );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$params){
         // 开启静态缓存
         if(C('HTML_CACHE_ON'))  {

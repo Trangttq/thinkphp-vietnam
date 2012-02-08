@@ -2,18 +2,18 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 静态缓存写入
- * 增加配置参数如下：
+ * Thao tác hệ thống mở rộng ghi tệp nhớ cache
+ * Thêm các tham số cấu hình như sau
  +------------------------------------------------------------------------------
  */
 class WriteHtmlCacheBehavior extends Behavior {
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$content){
         if(C('HTML_CACHE_ON') && defined('HTML_FILE_NAME'))  {
-            //静态文件写入
-            // 如果开启HTML功能 检查并重写HTML文件
-            // 没有模版的操作不生成静态文件
+            //Ghi tệp html tĩnh
+            // Nếu bạn mở tính năng tạo tệp tin tĩnh, cần kiểm tra và viết lại tệp
+            // Thao tác mà không sử dụng đến giao diện sẽ không thể tạo ra tệp tĩnh
             if(!is_dir(dirname(HTML_FILE_NAME)))
                 mk_dir(dirname(HTML_FILE_NAME));
             if( false === file_put_contents( HTML_FILE_NAME , $content ))

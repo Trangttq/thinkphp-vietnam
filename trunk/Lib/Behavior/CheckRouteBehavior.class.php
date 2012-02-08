@@ -2,17 +2,17 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 路由检测
+ * Thao tác mở rộng hệ thống 路由检测
  +------------------------------------------------------------------------------
  */
 class CheckRouteBehavior extends Behavior {
-    // 行为参数定义（默认值） 可在项目配置中覆盖
+    // Tham số định nghĩa cho thao tác mở rộng（默认值） 可在项目配置中覆盖
     protected $options   =  array(
         'URL_ROUTER_ON'         => false,   // 是否开启URL路由
         'URL_ROUTE_RULES'       => array(), // 默认路由规则，注：分组配置无法替代
         );
 
-    // 行为扩展的执行入口必须是run
+    // Thao tác mở rộng cần phải được run
     public function run(&$return){
         // 优先检测是否存在PATH_INFO，更能为普通检测所用
         $regx = trim($_SERVER['PATH_INFO'],'/');
