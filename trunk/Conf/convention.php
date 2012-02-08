@@ -38,7 +38,7 @@ return  array(
     'DEFAULT_MODULE'        => 'Index', // Module mặc định
     'DEFAULT_ACTION'        => 'index', // Thao tác mặc định
     'DEFAULT_CHARSET'       => 'utf-8', // Charset mặc định
-    'DEFAULT_TIMEZONE'      => 'Asia/Ho_Chi_Minh',	// Múi giờ khu vực
+    'DEFAULT_TIMEZONE'      => 'Asia/Saigon',	// Múi giờ khu vực có thể sử dụng: Asia/Ho_Chi_Minh hoặc Asia/Saigon
     'DEFAULT_AJAX_RETURN'   => 'JSON',  // Định dạng dữ liệu trả về từ ajax,tùy chọn JSON hoặc XML ...
     'DEFAULT_FILTER'        => 'htmlspecialchars', // Cách lọc thông số mặc định VD: $this->_get('Tên biến');$this->_post('Tên biến')...
 
