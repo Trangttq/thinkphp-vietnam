@@ -53,7 +53,7 @@ class DbMongo extends Db{
     public function connect($config='',$linkNum=0) {
         if ( !isset($this->linkID[$linkNum]) ) {
             if(empty($config))  $config =   $this->config;
-            $host = 'mongodb://'.($config['username']?"{$config['username']}":'').($config['password']?":{$config['password']}@":'').$config['hostname'].($config['hostport']?":{$config['hostport']}":'');
+            $host = 'mongodb://'.($config['username']?"{$config['username']}":'').($config['password']?":{$config['password']}@":'').$config['hostname'].($config['hostport']?":{$config['hostport']}":'').'/'.($config['database']?"{$config['database']}":'');
             try{
                 $this->linkID[$linkNum] = new mongo( $host,$config['params']);
             }catch (MongoConnectionException $e){
@@ -218,6 +218,7 @@ class DbMongo extends Db{
         if(isset($options['table'])) {
             $this->switchCollection($options['table']);
         }
+		$this->model  =   $options['model'];
         N('db_write',1);
         if($this->debug) {
             $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.insert(';
@@ -258,6 +259,7 @@ class DbMongo extends Db{
         if(isset($options['table'])) {
             $this->switchCollection($options['table']);
         }
+		$this->model  =   $options['model'];
         N('db_write',1);
         try{
             // 记录开始执行时间
@@ -314,6 +316,7 @@ class DbMongo extends Db{
         if(isset($options['table'])) {
             $this->switchCollection($options['table']);
         }
+		$this->model  =   $options['model'];
         N('db_write',1);
         $query   = $this->parseWhere($options['where']);
         $set  =  $this->parseSet($data);
@@ -379,6 +382,7 @@ class DbMongo extends Db{
         if(isset($options['table'])) {
             $this->switchCollection($options['table']);
         }
+		$this->model  =   $options['model'];
         N('db_write',1);
         if($this->debug) {
             $this->queryStr   =  $this->_dbName.'.'.$this->_collectionName.'.remove({})';
@@ -417,6 +421,7 @@ class DbMongo extends Db{
                 return $value;
             }
         }
+		$this->model  =   $options['model'];
         N('db_query',1);
         $query  =  $this->parseWhere($options['where']);
         $field =  $this->parseField($options['field']);
@@ -496,6 +501,7 @@ class DbMongo extends Db{
                 return $value;
             }
         }
+		$this->model  =   $options['model'];
         N('db_query',1);
         $query  =  $this->parseWhere($options['where']);
         $fields    = $this->parseField($options['field']);
@@ -534,6 +540,7 @@ class DbMongo extends Db{
         if(isset($options['table'])) {
             $this->switchCollection($options['table']);
         }
+		$this->model  =   $options['model'];
         N('db_query',1);
         $query  =  $this->parseWhere($options['where']);
         if($this->debug) {
