@@ -34,6 +34,7 @@ return  array(
     /* Thiết lập mặc định */
     'DEFAULT_APP'           => '@',     // Tên project mặc định, @ nghĩa là project hiện hành
     'DEFAULT_LANG'          => 'vi-vn', // Ngôn ngữ mặc định
+    'DEFAULT_THEME'    => '',	// 默认模板主题名称
     'DEFAULT_GROUP'         => 'Home',  // Nhóm mặc định
     'DEFAULT_MODULE'        => 'Index', // Module mặc định
     'DEFAULT_ACTION'        => 'index', // Thao tác mặc định
@@ -95,6 +96,9 @@ return  array(
     'TMPL_ACTION_ERROR'     => THINK_PATH.'Tpl/dispatch_jump.tpl', // 默认错误跳转对应的模板文件
     'TMPL_ACTION_SUCCESS'   => THINK_PATH.'Tpl/dispatch_jump.tpl', // 默认成功跳转对应的模板文件
     'TMPL_EXCEPTION_FILE'   => THINK_PATH.'Tpl/think_exception.tpl',// 异常页面的模板文件
+    'TMPL_DETECT_THEME'     => false,       // 自动侦测模板主题
+    'TMPL_TEMPLATE_SUFFIX'  => '.html',     // 默认模板文件后缀
+    'TMPL_FILE_DEPR'=>'/', //模板文件MODULE_NAME与ACTION_NAME之间的分割符，只对项目分组部署有效
 
     /* Thiết lập URL */
 	'URL_CASE_INSENSITIVE'  => false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
@@ -110,4 +114,5 @@ return  array(
     'VAR_AJAX_SUBMIT'       => 'ajax',  // Giá trị ajax được submit
     'VAR_PATHINFO'          => 's',	// PATHINFO Chế độ tương thích xuất đường dẫn như ?s=/module/action/id/1, thông tin trả về phụ tuộc vào URL_PATHINFO_DEPR
     'VAR_URL_PARAMS'      => '_URL_', // PATHINFO URL参数变量
+    'VAR_TEMPLATE'          => 't',		// 默认模板切换变量
 );

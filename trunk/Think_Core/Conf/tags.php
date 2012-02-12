@@ -6,7 +6,6 @@ return array(
     ),
     'app_begin'=>array(
         'ReadHtmlCache', // Đọc tệp cache tĩnh
-        'CheckTemplate', // Phát hiện giao diện
     ),
     'route_check'=>array(
         'CheckRoute', // Phát hiện bộ định tuyến
