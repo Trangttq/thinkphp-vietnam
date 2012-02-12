@@ -9,7 +9,7 @@ if (!defined('THINK_PATH')) exit();
 //  Thông tin phiên bản
 define('THINK_VERSION', '3.0RC2');
 define('THINK_RELEASE', '20120207');
-//revision 2724
+//revision 2730
 
 //   Thông tin hệ thống
 if(version_compare(PHP_VERSION,'5.4.0','<') ) {
