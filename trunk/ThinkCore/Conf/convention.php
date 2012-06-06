@@ -1,15 +1,4 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK IT ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2012 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
-// $Id: convention.php 2886 2012-04-04 10:03:44Z liu21st@gmail.com $
-
 /**
  +------------------------------------------------------------------------------
  * ThinkPHP惯例配置文件
@@ -35,13 +24,13 @@ return  array(
     'APP_SUB_DOMAIN_DENY'   => array(), //  子域名禁用列表
     'APP_GROUP_LIST'        => '',      // Các nhóm ứng dụng, phân tác nhau bằng dấu phẩy, VD: Home,Admin
 
-    /* Cookie设置 */
+    /* Thiết lập cookie */
     'COOKIE_EXPIRE'         => 3600,    // Coodie Expire
     'COOKIE_DOMAIN'         => '',      // Cookie Domain
     'COOKIE_PATH'           => '/',     // Cookie Path
     'COOKIE_PREFIX'         => '',      // Cookie Prefix - tránh trùng cookies
 
-    /* 默认设定 */
+    /* Thiết lập mặc định */
     'DEFAULT_APP'           => '@',     // Tên project mặc định, @ để chỉ project hiện tại
     'DEFAULT_LANG'          => 'vi-vn', // Ngôn ngữ mặc định
     'DEFAULT_THEME'    => '',	// Giao diện mặc định
