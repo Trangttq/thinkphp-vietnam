@@ -25,7 +25,7 @@
  */
 if (!defined('THINK_PATH')) exit();
 return  array(
-    /* 项目设定 */
+    /* Thiết lập core gốc */
     'APP_STATUS'            => 'debug',  // 应用调试模式状态 调试模式开启后有效 默认为debug 可扩展 并自动加载对应的配置文件
     'APP_FILE_CASE'         => false,   // 是否检查文件的大小写 对Windows平台有效
     'APP_AUTOLOAD_PATH'     => '',// 自动加载机制的自动搜索路径,注意搜索顺序
@@ -33,37 +33,37 @@ return  array(
     'APP_SUB_DOMAIN_DEPLOY' => false,   // 是否开启子域名部署
     'APP_SUB_DOMAIN_RULES'  => array(), // 子域名部署规则
     'APP_SUB_DOMAIN_DENY'   => array(), //  子域名禁用列表
-    'APP_GROUP_LIST'        => '',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin'
+    'APP_GROUP_LIST'        => '',      // Các nhóm ứng dụng, phân tác nhau bằng dấu phẩy, VD: Home,Admin
 
     /* Cookie设置 */
-    'COOKIE_EXPIRE'         => 3600,    // Coodie有效期
-    'COOKIE_DOMAIN'         => '',      // Cookie有效域名
-    'COOKIE_PATH'           => '/',     // Cookie路径
-    'COOKIE_PREFIX'         => '',      // Cookie前缀 避免冲突
+    'COOKIE_EXPIRE'         => 3600,    // Coodie Expire
+    'COOKIE_DOMAIN'         => '',      // Cookie Domain
+    'COOKIE_PATH'           => '/',     // Cookie Path
+    'COOKIE_PREFIX'         => '',      // Cookie Prefix - tránh trùng cookies
 
     /* 默认设定 */
-    'DEFAULT_APP'           => '@',     // 默认项目名称，@表示当前项目
-    'DEFAULT_LANG'          => 'zh-cn', // 默认语言
-    'DEFAULT_THEME'    => '',	// 默认模板主题名称
-    'DEFAULT_GROUP'         => 'Home',  // 默认分组
-    'DEFAULT_MODULE'        => 'Index', // 默认模块名称
-    'DEFAULT_ACTION'        => 'index', // 默认操作名称
-    'DEFAULT_CHARSET'       => 'utf-8', // 默认输出编码
-    'DEFAULT_TIMEZONE'      => 'PRC',	// 默认时区
+    'DEFAULT_APP'           => '@',     // Tên project mặc định, @ để chỉ project hiện tại
+    'DEFAULT_LANG'          => 'vi-vn', // Ngôn ngữ mặc định
+    'DEFAULT_THEME'    => '',	// Giao diện mặc định
+    'DEFAULT_GROUP'         => 'Home',  // Nhóm app mặc định
+    'DEFAULT_MODULE'        => 'Index', // Module mặc định
+    'DEFAULT_ACTION'        => 'index', // Thao tác mặc định
+    'DEFAULT_CHARSET'       => 'utf-8', // Charset mặc định
+    'DEFAULT_TIMEZONE'      => 'Asia/SaiGon',	// Múi giờ mặc định
     'DEFAULT_AJAX_RETURN'   => 'JSON',  // 默认AJAX 数据返回格式,可选JSON XML ...
     'DEFAULT_FILTER'        => 'htmlspecialchars', // 默认参数过滤方法 用于 $this->_get('变量名');$this->_post('变量名')...
 
-    /* 数据库设置 */
-    'DB_TYPE'               => 'mysql',     // 数据库类型
-	'DB_HOST'               => 'localhost', // 服务器地址
-	'DB_NAME'               => '',          // 数据库名
-	'DB_USER'               => 'root',      // 用户名
-	'DB_PWD'                => '',          // 密码
-	'DB_PORT'               => '',        // 端口
-	'DB_PREFIX'             => 'think_',    // 数据库表前缀
-    'DB_FIELDTYPE_CHECK'    => false,       // 是否进行字段类型检查
-    'DB_FIELDS_CACHE'       => true,        // 启用字段缓存
-    'DB_CHARSET'            => 'utf8',      // 数据库编码默认采用utf8
+    /* Thiết lập csdl */
+    'DB_TYPE'               => 'mysql',     // Kiểu csdl
+	'DB_HOST'               => 'localhost', // Máy chủ dữ liệu
+	'DB_NAME'               => '',          // Tên dữ liệu
+	'DB_USER'               => 'root',      // Tài khoản
+	'DB_PWD'                => '',          // MẬt khẩu
+	'DB_PORT'               => '',        // Cổng
+	'DB_PREFIX'             => 'think_',    // Tiền tố bảng
+    'DB_FIELDTYPE_CHECK'    => false,       // Kiểm tra loại trường db
+    'DB_FIELDS_CACHE'       => true,        // Lưu cach trường db
+    'DB_CHARSET'            => 'utf8',      // Charset sử dụng truy vấn
     'DB_DEPLOY_TYPE'        => 0, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
     'DB_RW_SEPARATE'        => false,       // 数据库读写是否分离 主从式有效
     'DB_MASTER_NUM'         => 1, // 读写分离后 主服务器数量
