@@ -2,7 +2,7 @@
 
 /**
  +------------------------------------------------------------------------------
- * 系统行为扩展 路由检测
+ * Behavior system expansion Routing detection
  +------------------------------------------------------------------------------
  */
 class CheckRouteBehavior extends Behavior {
@@ -21,19 +21,19 @@ class CheckRouteBehavior extends Behavior {
         if(!C('URL_ROUTER_ON')) return $return = false;
         // 路由定义文件优先于config中的配置定义
         $routes = C('URL_ROUTE_RULES');
-        // 路由处理
+        // Routing process
         if(!empty($routes)) {
             $depr = C('URL_PATHINFO_DEPR');
             // 分隔符替换 确保路由定义使用统一的分隔符
             $regx = str_replace($depr,'/',$regx);
             foreach ($routes as $rule=>$route){
-                if(0===strpos($rule,'/') && preg_match($rule,$regx,$matches)) { // 正则路由
+                if(0===strpos($rule,'/') && preg_match($rule,$regx,$matches)) { // Regular route
                     return $return = $this->parseRegex($matches,$route,$regx);
-                }else{ // 规则路由
+                }else{ // Rule of routing
                     $len1=   substr_count($regx,'/');
                     $len2 =  substr_count($rule,'/');
                     if($len1>=$len2) {
-                        if('$' == substr($rule,-1,1)) {// 完整匹配
+                        if('$' == substr($rule,-1,1)) {// Complete match
                             if($len1 != $len2) {
                                 continue;
                             }else{

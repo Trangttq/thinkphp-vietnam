@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html>
 <head>
-<title>页面提示</title>
+<title>System notice</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv='Refresh' content='{$waitSecond};URL={$jumpUrl}'>
 <style>
@@ -26,7 +26,7 @@ div.msg{margin:20px 0px}
 	</div>
 	<div class="tip">
 	<present name="closeWin" >
-		页面将在 <span class="wait">{$waitSecond}</span> 秒后自动关闭，如果不想等待请点击 <a href="{$jumpUrl}">这里</a> 关闭
+		Tự động chuyển  <span class="wait">{$waitSecond}</span> 秒后自动关闭，如果不想等待请点击 <a href="{$jumpUrl}">这里</a> 关闭
 	<else/>
 		页面将在 <span class="wait">{$waitSecond}</span> 秒后自动跳转，如果不想等待请点击 <a href="{$jumpUrl}">这里</a> 跳转
 	</present>
