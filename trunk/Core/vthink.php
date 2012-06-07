@@ -1,6 +1,5 @@
 <?php
 //Precaching Rules to be determined
-
 //载入核心文件
 //记录开始运行时间
 $GLOBALS['_beginTime'] = microtime(TRUE);
@@ -20,7 +19,6 @@ if(isset($_GET['app'])){
 }else{
 	$app_name = 'home';
 }
-
 if(!defined('APP_NAME'))			define('APP_NAME' , $app_name);
 if(!defined('APP_PATH'))			define('APP_PATH' , APPS_PATH.'/'.APP_NAME);
 
@@ -35,8 +33,8 @@ Review: 01-06-2011 In order to prevent malicious directories to generate
 Only application in the apps directory to generate the cache directory
 */
 if (!is_dir(RUNTIME_PATH)) {
-	require_once SITE_PATH . '/addons/libs/Io/Dir.class.php';
-	$dirs    = new Dir(SITE_PATH.'/apps/');
+	require_once SITE_PATH . '/Addons/libs/Io/Dir.class.php';
+	$dirs    = new Dir(SITE_PATH.'/Apps/');
 	$dirs    = $dirs->toArray();
 	$in_dirs = false;
 	foreach ($dirs as $v)
@@ -62,7 +60,8 @@ if(RUNTIME_ALLINONE && is_file(RUNTIME_PATH.'/~allinone.php')) {
         require RUNTIME_PATH.'/~runtime.php';
     }else{
         // 
-        require CORE_PATH."/sociax/runtime.php";
+        require CORE_PATH."/VThink/runtime.php";
+		echo "ok";
         // 生成核心编译~runtime缓存
         build_runtime();
     }
