@@ -17,13 +17,13 @@ return array(
     'SECURE_CODE'       =>  'SUS@#dev',
 
     // 默认应用
-    'DEFAULT_APPS'      => array('api', 'admin', 'home', 'myop', 'weibo', 'wap', 'w3g'),
+    'DEFAULT_APPS'      => array('home','admin'),
 
     // 是否开启伪静态
-    'URL_ROUTER_ON'     => true,
+    'URL_ROUTER_ON'     => FALSE,
 
     // 是否开启调试模式 (开启AllInOne模式时设置无效, 将自动置为false)
-    'APP_DEBUG'         => false,
+    'APP_DEBUG'         => true,
 
     // 是否开启模版缓存
     'TMPL_CACHE_ON'     => true,

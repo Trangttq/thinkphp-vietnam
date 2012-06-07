@@ -24,11 +24,11 @@ function build_runtime() {
 	$runtime[]  =  CORE_PATH.'/VThink/extend.php';		// 扩展函数库
 
     if(version_compare(PHP_VERSION,'5.2.0','<') )
-        // 加载兼容函数
+        // Load compatible function
         $runtime[]	=	 THINK_PATH.'/Common/compat.php';
 
-	// 核心基类必须加载
-    $runtime[]  =  THINK_PATH.'/Core/Think.class.php';
+	// Core base class must be loaded
+    $runtime[]  =  THINK_PATH.'/Lib/Core/Think.class.php';
 
     // 读取核心编译文件列表
     if(is_file(CONFIG_PATH.'core.php')) {
