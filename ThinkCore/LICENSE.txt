@@ -1,0 +1,2 @@
+Bản quyền thuộc về ThinkPHP Trung Quốc
+Phát triển bởi Đỗ Tiến Điệp
