@@ -3,12 +3,12 @@
 class UserModel extends CommonModel {
 
     protected $_validate = array(
-        array('account', '/^[a-z]\w{4,}$/i', '帐号格式错误'),
-        array('password', 'require', '密码必须'),
-        array('repassword', 'require', '确认密码必须'),
-        array('repassword', 'password', '确认密码不一致', 0, 'confirm'),
-        array('account', '', '帐号已经存在', 0, 'unique', self::MODEL_INSERT),
-        array('bind_account', 'checkBindAccount', '绑定帐号重复', 2, 'callback', self::MODEL_BOTH),
+        array('account', '/^[a-z]\w{4,}$/i', 'Tên tài khoản không hợp lệ'),
+        array('password', 'require', 'Bạn phải nhập mật khẩu'),
+        array('repassword', 'require', 'Bạn phải xác thực mật khẩu'),
+        array('repassword', 'password', 'Mật khẩu không trùng khớp', 0, 'confirm'),
+        array('account', '', 'Tài khoản này đã tồn tại', 0, 'unique', self::MODEL_INSERT),
+        array('bind_account', 'checkBindAccount', 'Đồng bộ tài khoản', 2, 'callback', self::MODEL_BOTH),
     );
     protected $_auto = array(
         array('password', 'pwdHash', 'callback', self::MODEL_BOTH),
