@@ -31,11 +31,11 @@ class ShowPageTraceBehavior extends Behavior {
         $log = Log::$log;
         $files = get_included_files();
         $trace = array(
-            '当前请求' => date('Y-m-d H:i:s', $_SERVER['REQUEST_TIME']) . ' ' . $_SERVER['SERVER_PROTOCOL'] . ' ' . $_SERVER['REQUEST_METHOD'] . ':' . __SELF__,
-            '运行信息' => $this->showTime(),
-            '会话ID' => session_id(),
-            '日志记录' => count($log) ? count($log) . '条日志<br/>' . implode('<br/>', $log) : '无日志记录',
-            '加载文件' => count($files) . str_replace("\n", '<br/>', substr(substr(print_r($files, true), 7), 0, -2)),
+            'Thời gian truy vấn' => date('Y-m-d H:i:s', $_SERVER['REQUEST_TIME']) . ' ' . $_SERVER['SERVER_PROTOCOL'] . ' ' . $_SERVER['REQUEST_METHOD'] . ':' . __SELF__,
+            'Thông tin thao tác' => $this->showTime(),
+            'Session ID' => session_id(),
+            'Logging' => count($log) ? count($log) . ' record<br/>' . implode('<br/>', $log) : 'No log',
+            'Các tệp sử dụng' => count($files) . str_replace("\n", '<br/>', substr(substr(print_r($files, true), 7), 0, -2)),
         );
 
         // 读取项目定义的Trace文件

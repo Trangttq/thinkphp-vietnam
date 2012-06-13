@@ -130,7 +130,7 @@ var ThinkAjax = {
                 alert("Máy chủ trả về giá trị non-js:\n\n"+str.substr(0,100));
             }
             if ($(target) && this.showTip){
-                $(target).innerHTML    = "Máy chủ trả về dữ liệu lỗi!";
+                $(target).innerHTML    = "Máy chủ trả về dữ liệu lỗi!";//Có thể thêm +str để lấy thông báo lỗi
                 this.intval = window.setTimeout(function (){
                     var myFx = new Fx.Style(target, 'opacity',{
                         duration:1000
