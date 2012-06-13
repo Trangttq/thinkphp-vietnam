@@ -1,0 +1,143 @@
+[ 2012-06-13T11:58:48+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:49+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:49+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:50+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:50+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:50+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+[ 2012-06-13T11:58:50+07:00 ] ERR: (ThinkException) Không thể tải module:Index
+------127.0.0.1 REQUEST_URI:/ThinkPHP/------
+[ 2012-06-13T11:59:33+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T11:59:33+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T11:59:33+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000800s ]
+[ 2012-06-13T11:59:33+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000884s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/------
+[ 2012-06-13T11:59:48+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T11:59:48+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T11:59:48+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000697s ]
+[ 2012-06-13T11:59:48+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000781s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/------
+[ 2012-06-13T12:00:02+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:00:02+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:00:02+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000695s ]
+[ 2012-06-13T12:00:02+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000779s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=admin------
+[ 2012-06-13T12:00:49+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:00:49+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:00:49+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000731s ]
+[ 2012-06-13T12:00:49+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000819s ]
+
+[ 2012-06-13T12:01:46+07:00 ] ERR: (ThinkException) Tệp giao diện không tồn tại[./App/Tpl/admin/default/Index/index.html]
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=admin------
+[ 2012-06-13T12:02:07+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000721s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000811s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000857s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000948s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.008505s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.008607s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000547s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000568s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000386s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000662s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002383s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-06-13T12:02:07+07:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000605s ]
+[ 2012-06-13T12:02:07+07:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000681s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=home------
+[ 2012-06-13T12:02:32+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:02:32+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:02:32+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000723s ]
+[ 2012-06-13T12:02:32+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000807s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=home------
+[ 2012-06-13T12:03:08+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000722s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000807s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000838s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000918s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.008051s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.008152s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000558s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000562s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000386s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000658s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002378s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-06-13T12:03:08+07:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000601s ]
+[ 2012-06-13T12:03:08+07:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000679s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=home------
+[ 2012-06-13T12:20:06+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000816s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000903s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000863s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000957s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.008073s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.008174s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000555s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000559s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000402s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000653s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002384s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-06-13T12:20:06+07:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.000639s ]
+[ 2012-06-13T12:20:06+07:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.000722s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=admin------
+[ 2012-06-13T12:22:36+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000800s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000887s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000867s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000947s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.007565s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.007663s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000541s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000559s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000405s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000867s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002589s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-06-13T12:22:36+07:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.001728s ]
+[ 2012-06-13T12:22:36+07:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.001813s ]
+
+------127.0.0.1 REQUEST_URI:/ThinkPHP/?g=admin------
+[ 2012-06-13T12:24:10+07:00 ] NOTIC: [8] Undefined index: HTTP_X_REQUESTED_WITH App.class.php 第 40 行.
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ app_begin ] --START--
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run ReadHtmlCache Behavior [ RunTime:0.000748s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ app_begin ] --END-- [ RunTime:0.000836s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_template ] --START--
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run LocationTemplate Behavior [ RunTime:0.000818s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_template ] --END-- [ RunTime:0.000899s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_parse ] --START--
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run ParseTemplate Behavior [ RunTime:0.007731s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_parse ] --END-- [ RunTime:0.007832s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_filter ] --START--
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run ContentReplace Behavior [ RunTime:0.000540s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run TokenBuild Behavior [ RunTime:0.000557s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run WriteHtmlCache Behavior [ RunTime:0.000385s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run ShowRuntime Behavior [ RunTime:0.000790s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_filter ] --END-- [ RunTime:0.002485s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_end ] --START--
+[ 2012-06-13T12:24:10+07:00 ] INFO: Run ShowPageTrace Behavior [ RunTime:0.001709s ]
+[ 2012-06-13T12:24:10+07:00 ] INFO: Tag[ view_end ] --END-- [ RunTime:0.001797s ]
+
